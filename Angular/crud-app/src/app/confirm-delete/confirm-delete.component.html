@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Xóa file</h1>
+<div mat-dialog-content>
+  Bạn có muốn xóa người dùng?
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="dialogRef.close(false)">Không</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="dialogRef.close(false)">Có</button>
+</div>

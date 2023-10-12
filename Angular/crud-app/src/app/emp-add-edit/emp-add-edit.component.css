@@ -1,0 +1,28 @@
+.content {
+  padding: 10px 25px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row mat-form-field {
+  width: 100%;
+}
+
+.actions {
+  padding: 0 25px 20px;
+}
+
+.actions button {
+  flex: 1;
+}
+
+.title-form {
+  padding: 0;
+}
+
+.title-form>h1{
+  text-align: center;
+}

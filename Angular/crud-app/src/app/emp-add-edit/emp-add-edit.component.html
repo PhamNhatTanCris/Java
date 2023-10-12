@@ -1,0 +1,68 @@
+<div mat-dialog-title class="title-form">
+  <h1>Thêm danh sách</h1>
+</div>
+<form action="" [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Tên</mat-label>
+        <input matInput type="text" placeholder="Ex: Tân" formControlName="firstName" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Họ đệm</mat-label>
+        <input matInput type="text" placeholder="Ex: Phạm Nhật" formControlName="lastName" required>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Ex. email@gmail.com" formControlName="email" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Ngày sinh</mat-label>
+        <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" formControlName="date" required>
+        <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="row" style="margin-bottom: 10px;">
+      <mat-radio-group aria-label="Chọn 1 giới tính" formControlName="gender" required>
+        <mat-label><b>Giới tính</b></mat-label>
+        <mat-radio-button value="Nam">Nam</mat-radio-button>
+        <mat-radio-button value="Nữ">Nữ</mat-radio-button>
+        <mat-radio-button value="Khác">Khác</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Nghề nghiệp</mat-label>
+        <mat-select formControlName="education">
+          <mat-option *ngFor="let val of education" [value]="val">
+            {{val}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Công ty</mat-label>
+        <input matInput type="text" placeholder="Ex: Google" formControlName="company">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Kinh nghiệm(năm)</mat-label>
+        <input matInput type="text" placeholder="Ex: 3" type="number" formControlName="experience">
+        <mat-hint>Tính bằng năm</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Mức lương</mat-label>
+        <input matInput type="text" placeholder="Ex: 14.000.000" type="number" formControlName="salary">
+        <mat-hint>Tính bằng VNĐ</mat-hint>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="actions">
+    <button mat-raised-button [mat-dialog-close]="false">Hủy</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Cập nhật' : 'Lưu'}}</button>
+  </div>
+</form>

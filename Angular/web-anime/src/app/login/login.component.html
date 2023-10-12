@@ -1,0 +1,77 @@
+<div class="container">
+  <form class="sign-in-form" #signInForm="ngForm" (ngSubmit)="onSubmit(signInForm)">
+    <h2>Sign in</h2>
+    <div class="row-control">
+      <mat-form-field appearance="outline" class="row-control-item" style="width: 248px;">
+        <mat-label>Tài khoản</mat-label>
+        <input matInput placeholder="Tài khoản" name="username" [(ngModel)]="userInfor.userName" minlength="6"
+          maxlength="32" [pattern]="userNamePattern" #username="ngModel" required />
+        <mat-error *ngIf="username.touched && !username.valid">
+          <span *ngIf="username.errors?.['required']">Username is required</span>
+          <span *ngIf="username.errors?.['minlength'] || username.errors?.['maxlength']">Length from 6 to 32
+            characters</span>
+          <span
+            *ngIf="!(username.errors?.['minlength'] || username.errors?.['maxlength']) && username.errors?.['pattern']">Only
+            alphabet</span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <!-- Password -->
+    <div class="row-control">
+      <mat-form-field appearance="outline" class="row-control-item">
+        <mat-label>Mật khẩu</mat-label>
+        <input type="password" matInput [type]="hide ? 'password' : 'text'" placeholder="Mật khẩu" name="password"
+          [(ngModel)]="userInfor.passWord" [pattern]="passwordPattern" required #password="ngModel" />
+        <button mat-icon-button matSuffix (click)="hide=!hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="password.touched && !password.valid">
+          <span *ngIf="password.errors?.['required']">Password is required</span>
+          <span *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength']">Length from 6 to 32
+            characters</span>
+          <span
+            *ngIf="!(password.errors?.['minlength'] || password.errors?.['maxlength']) && password.errors?.['pattern']">Only
+            alphabet</span>
+        </mat-error>
+      </mat-form-field>
+      <!-- <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'"
+        name="password"
+        [(ngModel)]="userInfor.passWord" [pattern]="passwordPattern" required #password="ngModel"
+        >
+        <button mat-icon-button matSuffix (click)="hide=!hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="password.touched && !password.valid">
+          <span *ngIf="password.errors?.['required']">Password is required</span>
+          <span *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength']">Length from 6 to 32 characters</span>
+          <span *ngIf="!(password.errors?.['minlength'] || password.errors?.['maxlength']) && password.errors?.['pattern']">Only alphabet</span>
+        </mat-error>
+      </mat-form-field> -->
+    </div>
+    <div class="row-control-remember">
+      <mat-checkbox name="rememberMe" [(ngModel)]="userInfor.rememberMe">Lưu tài khoản</mat-checkbox>
+    </div>
+    <div class="row-control row-actions">
+      <button mat-raised-button color="primary" type="submit" class="sign-in-btn">Đăng nhập</button>
+      <!-- <button mat-raised-button color="primary" type="submit">Sign in</button> -->
+      <!-- <button mat-raised-button color="primary" type="submit" [disabled]="signInForm.form.invalid" class="sign-in-btn">Đăng nhập</button> -->
+      <!-- <button style="margin-left: 10px;" mat-raised-button color="primary" type="submit"
+      routerLink="/register">Đăng ký</button> -->
+    </div>
+    <div class="row-control row-sign-in-rf">
+      <p><a href="/sign-in-rf" style="text-decoration: none; color: #8983FC;">Quên mật khẩu?</a></p>
+    </div>
+    <hr style="width: 80%;" />
+    <div class="row-control row-register">
+      <button style="margin-left: 10px;" mat-raised-button color="primary" type="submit" routerLink="/register">Đăng
+        ký</button>
+    </div>
+  </form>
+  <!-- <pre>
+    {{ username.errors | json }}
+  </pre> -->
+
+</div>

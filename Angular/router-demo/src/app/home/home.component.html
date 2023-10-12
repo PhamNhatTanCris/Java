@@ -1,0 +1,13 @@
+
+<div class="container">
+  <button (click)="toggleMenu()">☰</button>
+<div class="menu" [ngClass]="{'hidden': isMenuHidden}">
+  <!-- Nội dung của thanh menu -->
+  <ul>
+    <li><a href="#">Trang chủ</a></li>
+    <li><a href="#">Dịch vụ</a></li>
+    <li><a href="#">Giới thiệu</a></li>
+    <!-- Các mục menu khác -->
+  </ul>
+</div>
+</div>

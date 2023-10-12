@@ -1,0 +1,65 @@
+
+<nav id="container" [style]="styleElement">
+  <i>
+    <a href="#">
+      <img src="" alt="logo">
+    </a>
+    <a href="">Freetrial4u</a>
+  </i>
+  <ul class="main-menu">
+    <li>
+      <a routerLink="/home">Trang chủ</a>
+    </li>
+    <li>
+      <a routerLink="/manga">Manga</a>
+    </li>
+    <li>
+      <a routerLink="/anime">Anime</a>
+    </li>
+    <li>
+      <a routerLink="/introduct">Giới thiệu</a>
+    </li>
+    <li>
+      <a routerLink="/list">Sản phẩm <i class="fa-solid fa-chevron-down" style="color: #000000; font-size: 14px;"></i></a>
+      <ul class="sub-menu">
+          <li><a href="" routerLink="/manga">Truyện tranh</a></li>
+          <li><a href="/anime" >Hoạt hình</a></li>
+          <li><a href="">Phim<i class="fa-solid fa-angle-right" style="color: #fff;"></i>
+          </a>
+            <ul class="sub-menu-child">
+              <li><a href="">Tình cảm</a></li>
+              <li><a href="">Hành động</a></li>
+              <li><a href="">Kinh dị</a></li>
+            </ul>
+          </li>
+      </ul>
+    </li>
+    <li>
+      <a routerLink="/service">Dịch vụ</a>
+    </li>
+  </ul>
+  <div class="user-hidden">
+    <div>
+      <a routerLink="/login">
+        <i class="fa-solid fa-user" style="color: #000000;"></i>
+      </a>
+    </div>
+    <div class="menu-hidden">
+     <a href="">
+      <i class="fa-solid fa-bars" style="color: #000000;"></i>
+     </a>
+    </div>
+  </div>
+</nav>
+
+<div class="search-form">
+  <form action="" class="search-form-item">
+    <input class="search-input" type="text" placeholder="Tìm kiếm..." [(ngModel)]="stringSearch" name="stringSearch">
+    <a (click)="contentSearch()" style="cursor: pointer;">
+      <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+    </a>
+  </form>
+</div>
+
+
+

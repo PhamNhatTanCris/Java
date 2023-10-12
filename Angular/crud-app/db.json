@@ -1,0 +1,93 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "vvdsa",
+      "lastName": "ghtyty",
+      "email": "dhfghfg",
+      "date": "2017-01-16T17:00:00.000Z",
+      "gender": "Khác",
+      "education": "Giáo viên",
+      "company": "dsds",
+      "experience": "2",
+      "salary": "121212333",
+      "id": 3
+    },
+    {
+      "firstName": "ádas",
+      "lastName": "đâs",
+      "email": "đá",
+      "date": "2023-10-08T17:00:00.000Z",
+      "gender": "Nam",
+      "education": "Sinh viên",
+      "company": "ádasd",
+      "experience": "3",
+      "salary": "312312312",
+      "id": 4
+    },
+    {
+      "firstName": "adfaf",
+      "lastName": "adas",
+      "email": "đâs",
+      "date": "2023-10-03T17:00:00.000Z",
+      "gender": "Nam",
+      "education": "Học sinh",
+      "company": "ádasd",
+      "experience": "3",
+      "salary": "414123123",
+      "id": 5
+    },
+    {
+      "firstName": "adasdasd",
+      "lastName": "sdasda",
+      "email": "asdasda",
+      "date": "2023-10-05T17:00:00.000Z",
+      "gender": "Nam",
+      "education": "Sinh viên",
+      "company": "sadasd",
+      "experience": "3",
+      "salary": "1477777777",
+      "id": 6
+    },
+    {
+      "firstName": "qweqwe",
+      "lastName": "qweqwe",
+      "email": "qweqweqw",
+      "date": "2023-10-09T17:00:00.000Z",
+      "gender": "Nam",
+      "education": "Giáo viên",
+      "company": "qweqwe",
+      "experience": "123123123",
+      "salary": "2312412",
+      "id": 7
+    },
+    {
+      "firstName": "qweqwe",
+      "lastName": "qweqwe",
+      "email": "qweqwe",
+      "date": "2023-10-02T17:00:00.000Z",
+      "gender": "Nam",
+      "education": "Giáo viên",
+      "company": "qweqweqw",
+      "experience": "31",
+      "salary": "12312312312",
+      "id": 8
+    }
+  ]
+}
